@@ -44,6 +44,8 @@ class ViewController: UIViewController, MenuDelegate {
         
         SideMenuManager.default.menuPresentMode = .menuSlideIn
         SideMenuManager.default.menuWidth = view.frame.width * CGFloat(0.75)
+        SideMenuManager.default.menuAnimationBackgroundColor = UIColor.clear
+        SideMenuManager.default.menuAnimationFadeStrength = 0.5
         SideMenuManager.default.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
         SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
         
