@@ -1,4 +1,7 @@
 # DrawerMenu-iOS
 create drawer menu navigation in iOS
 
-![](DrawerMenu-iOS-Demo.gif)
+<p align="center">
+  ![](DrawerMenu-iOS-Demo.gif)
+</p>
+
