@@ -1,0 +1,6 @@
+framework module Pods_DrawerMenuTests {
+  umbrella header "Pods-DrawerMenuTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

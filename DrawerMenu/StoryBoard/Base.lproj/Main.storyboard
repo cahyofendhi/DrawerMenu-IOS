@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C4U-fj-tm8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Drawer Menu-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DrawerMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAIN MENU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGi-mp-Tiw">
+                                <rect key="frame" x="140" y="333" width="95.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.5735229624" green="0.25721042249999998" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oGi-mp-Tiw" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="TMw-Rb-FMr"/>
+                            <constraint firstItem="oGi-mp-Tiw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YIV-US-pyf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Drawer Menu" id="TZd-N3-9Rj">
+                        <barButtonItem key="backBarButtonItem" title=" " id="geS-hE-e9Y"/>
+                        <barButtonItem key="leftBarButtonItem" image="ic_menu" id="PSU-mB-Ewz">
+                            <connections>
+                                <segue destination="cs6-c7-roF" kind="presentation" identifier="rootSideMenu" id="owb-t7-5xQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="labelMain" destination="oGi-mp-Tiw" id="Ici-jp-OS2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="924" y="133.5832083958021"/>
+        </scene>
+        <!--Side Menu Navigation Controller-->
+        <scene sceneID="hbE-eK-D2t">
+            <objects>
+                <navigationController storyboardIdentifier="LeftMenuNavigationController" navigationBarHidden="YES" id="cs6-c7-roF" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="krB-NF-OaT">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="Hen-Tl-ZR5" kind="relationship" relationship="rootViewController" id="hAf-mw-Lj9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t7x-Pl-9gp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1825" y="134"/>
+        </scene>
+        <!--Side MenuVC-->
+        <scene sceneID="uD7-3d-xAq">
+            <objects>
+                <viewController id="Hen-Tl-ZR5" customClass="SideMenuVC" customModule="DrawerMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zgr-LC-NmG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DUv-DH-9Cx">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.98431372549019602" green="0.64313725490196072" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" red="0.98431372549019602" green="0.64313725490196072" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexColor" red="0.98431372549019602" green="0.64313725490196072" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.98431372549019602" green="0.64313725490196072" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexTrackingBackgroundColor" red="0.98431372549019602" green="0.64313725490196072" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Hen-Tl-ZR5" id="urP-S4-9fE"/>
+                                    <outlet property="delegate" destination="Hen-Tl-ZR5" id="xa4-9g-7jX"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98431372549019602" green="0.64313725490196072" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.98431372549019602" green="0.64313725490196072" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zlb-nP-hZH" firstAttribute="bottom" secondItem="DUv-DH-9Cx" secondAttribute="bottom" id="Kox-xH-cpq"/>
+                            <constraint firstItem="Zlb-nP-hZH" firstAttribute="trailing" secondItem="DUv-DH-9Cx" secondAttribute="trailing" id="PX6-Mj-g7s"/>
+                            <constraint firstItem="DUv-DH-9Cx" firstAttribute="leading" secondItem="Zlb-nP-hZH" secondAttribute="leading" id="sjT-nn-RQ4"/>
+                            <constraint firstItem="DUv-DH-9Cx" firstAttribute="top" secondItem="Zlb-nP-hZH" secondAttribute="top" id="zhq-Np-2uL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zlb-nP-hZH"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Boe-PK-TkF"/>
+                    <connections>
+                        <outlet property="tableView" destination="DUv-DH-9Cx" id="kyw-d8-0Sh"/>
+                        <segue destination="sMR-Pu-nwl" kind="show" identifier="root_menu" id="2mc-Er-rfJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="78P-Nq-B0F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2738" y="134"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EJY-VG-qh8">
+            <objects>
+                <viewController id="sMR-Pu-nwl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vWU-jJ-cOJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="3Tn-G1-C5t"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mQ5-oS-QYi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3889" y="130"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="H1P-CB-jU8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C4U-fj-tm8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8cw-qd-aHd">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yid-tz-Rhw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IxB-of-BZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15.199999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--Menu1VC-->
+        <scene sceneID="LpA-XC-ZIX">
+            <objects>
+                <viewController storyboardIdentifier="Menu1VC" id="zaz-xw-Nt3" customClass="Menu1VC" customModule="DrawerMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A9I-WW-LzY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.00604183406" green="0.67865640859999998" blue="0.1920807893" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="M0Z-ts-duH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CrI-PE-VOL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="289" y="900"/>
+        </scene>
+        <!--Menu2VC-->
+        <scene sceneID="PT1-vZ-7SD">
+            <objects>
+                <viewController storyboardIdentifier="Menu2VC" id="z9z-R0-QIC" customClass="Menu2VC" customModule="DrawerMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6VT-d1-Oq2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.49329230788414213" blue="0.2741495399249344" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="7gc-0O-I0Y"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3C9-ZW-mH2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1429" y="915"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_menu" width="26" height="18"/>
+    </resources>
+    <color key="tintColor" red="0.5735229624" green="0.25721042249999998" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
